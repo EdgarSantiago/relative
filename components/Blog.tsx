@@ -124,6 +124,10 @@ const ArticleList = () => {
           <BlogAuthor name="John Doe" date={new Date('2021-04-06T19:01:27Z')} />
         </Box>
       </Box>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <Heading as="h2" marginTop="5">
         Latest articles
       </Heading>

@@ -1,12 +1,15 @@
 // pages/_app.js
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from "@chakra-ui/react";
+import Chakra from "../components/chakra/chakra";
 
-function MyApp({ Component, pageProps }) {
+import type { AppProps } from "next/app";
+
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <ChakraProvider>
-      <Component {...pageProps} />
-    </ChakraProvider>
-  )
+    <Chakra>
+      <Component {...pageProps} key={router.route} />
+    </Chakra>
+  );
 }
 
-export default MyApp
+export default MyApp;

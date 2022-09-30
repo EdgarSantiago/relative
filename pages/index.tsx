@@ -49,11 +49,8 @@ const Home: NextPage = () => {
               <Section />
               <div>
                 <section>
-                  <br></br>
                   <Features />
-                  <br></br>
                   <Blog />
-                  <br></br>
                   <Testimonials />
                 </section>
               </div>

@@ -8,6 +8,7 @@ import Section from '../components/Section'
 import Subscribe from '../components/Subscribe'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
+import Blog from '../components/Blog'
 
 import {
   Box,
@@ -50,6 +51,7 @@ const Home: NextPage = () => {
                  <div>
                     <section>
                       <Features />
+                      <Blog />
                       <Testimonials />
                     </section>
                  </div>

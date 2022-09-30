@@ -29,11 +29,12 @@ export default function WithSubnavigation() {
     <Box>
       <Flex
         bg={useColorModeValue('black', 'black')}
+        // style={{backgroundImage:"url(https://i.pinimg.com/550x/25/a3/5a/25a35a092b29b2bf32cba5555b9dd630.jpg)"}}
         color={useColorModeValue('black', 'black')}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
+        borderBottom={3}
         borderStyle={'solid'}
         borderColor={useColorModeValue('black', 'black')}
         align={'center'}>
@@ -84,7 +85,7 @@ export default function WithSubnavigation() {
             bg={'gray'}
             href={'#'}
             _hover={{
-              bg: 'pink.300',
+              bg: 'black.300',
             }}>
             Registrar
           </Button>

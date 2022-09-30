@@ -6,6 +6,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Section from '../components/Section'
 import Subscribe from '../components/Subscribe'
+import Features from '../components/Features'
+import Testimonials from '../components/Testimonials'
 
 import {
   Box,
@@ -45,6 +47,12 @@ const Home: NextPage = () => {
             <Navbar />
               <main>
                 <Section />
+                 <div>
+                    <section>
+                      <Features />
+                      <Testimonials />
+                    </section>
+                 </div>
                 <Subscribe />
               </main>
             <Footer />

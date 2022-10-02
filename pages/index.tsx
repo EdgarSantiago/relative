@@ -32,9 +32,11 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
   return (
+<<<<<<< HEAD
     <div>
       <Head>
         <title>Relative Produções</title>
@@ -61,6 +63,15 @@ const Home: NextPage = () => {
         </header>
       </div>
     </div>
+=======
+    <Layout>
+      <Section />
+      <Features />
+      <Blog />
+      <Testimonials />
+      <Subscribe />
+    </Layout>
+>>>>>>> cf1dcf3fe50f823f60d845dd5deb4386b97c6bec
   );
 };
 

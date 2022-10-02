@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             <main>
               <Section />
               <div>
-                <section>
+                <section>yarn
                   <Features />
                   <Blog />
                   <Testimonials />

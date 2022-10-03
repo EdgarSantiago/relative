@@ -27,9 +27,10 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box position={"sticky"} top="0px" bg="" zIndex={999}>
       <Flex
         color={useColorModeValue("black", "black")}
+        bg={useColorModeValue("black", "black")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -77,8 +78,8 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
+  const linkColor = useColorModeValue("gray.200", "gray.200");
+  const linkHoverColor = useColorModeValue("gray.400", "gray.400");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (

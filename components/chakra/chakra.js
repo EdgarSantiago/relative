@@ -8,23 +8,6 @@ import {
 
 import theme from "../lib/theme";
 
-export default function Chakra({ cookies, children }) {
-  const colorModeManager =
-    typeof cookies === "string"
-      ? cookieStorageManager(cookies)
-      : localStorageManager;
-
-  return (
-    <ChakraProvider theme={theme} colorModeManager={colorModeManager}>
-      {children}
-    </ChakraProvider>
-  );
+export default function Chakra({ children }) {
+  return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
 }
-
-export const getServerSideProps = async ({ req }) => {
-  return {
-    props: {
-      cookies: req.headers.cookie ?? "",
-    },
-  };
-};

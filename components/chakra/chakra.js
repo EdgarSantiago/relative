@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import { GetServerSideProps } from "next";
 import React, { ReactNode } from "react";
 import {
@@ -9,12 +8,7 @@ import {
 
 import theme from "../lib/theme";
 
-type Props = {
-  children?: ReactNode;
-  cookies?: any;
-};
-
-export default function Chakra({ cookies, children }: Props) {
+export default function Chakra({ cookies, children }) {
   const colorModeManager =
     typeof cookies === "string"
       ? cookieStorageManager(cookies)
@@ -27,7 +21,7 @@ export default function Chakra({ cookies, children }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+export const getServerSideProps = async ({ req }) => {
   return {
     props: {
       cookies: req.headers.cookie ?? "",

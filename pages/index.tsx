@@ -43,7 +43,6 @@ const Home: NextPage = () => {
             <Section />
             <div>
               <section>
-                yarn
                 <Features />
                 <Blog />
                 <Testimonials />

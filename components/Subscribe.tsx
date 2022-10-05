@@ -89,7 +89,7 @@ export default function Simple() {
               colorScheme={state === "success" ? "green" : "gray"}
               isLoading={state === "submitting"}
               w="100%"
-              type={state === "success" ? "button" : "Enviar"}
+              type={state === "success" ? "button" : "button"}
             >
               {state === "success" ? <CheckIcon /> : "Enviar"}
             </Button>

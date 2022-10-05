@@ -59,7 +59,11 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 
 const ArticleList = () => {
   return (
-    <Container maxW={"7xl"} p="12">
+    <Container
+      maxW={"7xl"}
+      px={["20px", "40px", "100px"]}
+      py={["25px", "30px", "100px"]}
+    >
       <Heading as="h1">Stories by Chakra Templates</Heading>
       <Box
         marginTop={{ base: "1", sm: "5" }}
@@ -176,8 +180,86 @@ const ArticleList = () => {
             />
           </Box>
         </WrapItem>
+
+        <WrapItem width={{ base: "100%", sm: "45%", md: "45%", lg: "30%" }}>
+          <Box w="100%">
+            <Box borderRadius="lg" overflow="hidden">
+              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+                <Image
+                  transform="scale(1.0)"
+                  src={
+                    "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+                  }
+                  alt="some text"
+                  objectFit="contain"
+                  width="100%"
+                  transition="0.3s ease-in-out"
+                  _hover={{
+                    transform: "scale(1.05)",
+                  }}
+                />
+              </Link>
+            </Box>
+            <BlogTags tags={["Engineering", "Product"]} marginTop="3" />
+            <Heading fontSize="xl" marginTop="2">
+              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+                Some blog title
+              </Link>
+            </Heading>
+            <Text as="p" fontSize="md" marginTop="2">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industrys standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </Text>
+            <BlogAuthor
+              name="John Doe"
+              date={new Date("2021-04-06T19:01:27Z")}
+            />
+          </Box>
+        </WrapItem>
+
+        <WrapItem width={{ base: "100%", sm: "45%", md: "45%", lg: "30%" }}>
+          <Box w="100%">
+            <Box borderRadius="lg" overflow="hidden">
+              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+                <Image
+                  transform="scale(1.0)"
+                  src={
+                    "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+                  }
+                  alt="some text"
+                  objectFit="contain"
+                  width="100%"
+                  transition="0.3s ease-in-out"
+                  _hover={{
+                    transform: "scale(1.05)",
+                  }}
+                />
+              </Link>
+            </Box>
+            <BlogTags tags={["Engineering", "Product"]} marginTop="3" />
+            <Heading fontSize="xl" marginTop="2">
+              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+                Some blog title
+              </Link>
+            </Heading>
+            <Text as="p" fontSize="md" marginTop="2">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industrys standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </Text>
+            <BlogAuthor
+              name="John Doe"
+              date={new Date("2021-04-06T19:01:27Z")}
+            />
+          </Box>
+        </WrapItem>
       </Wrap>
-      <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
+      <Divider mt="8" mb="8" />
+
+      <VStack spacing="2" alignItems="flex-start">
         <Heading as="h2">What we write about</Heading>
         <Text as="p" fontSize="lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec

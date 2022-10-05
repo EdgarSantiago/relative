@@ -37,21 +37,11 @@ import Layout from "../components/Layout";
 const Home: NextPage = () => {
   return (
     <Layout title="Início">
-      <div>
-        <div>
-          <main>
-            <Section />
-            <div>
-              <section>
-                <Features />
-                <Blog />
-                <Testimonials />
-              </section>
-            </div>
-          </main>
-          <Subscribe />
-        </div>
-      </div>
+      <Section />
+      <Features />
+      <Blog />
+      <Testimonials />
+      <Subscribe />
     </Layout>
   );
 };

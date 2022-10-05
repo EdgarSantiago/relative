@@ -32,7 +32,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function SimpleThreeColumns() {
   return (
-    <Box px={"200px"} py="100px">
+    <Box px={["5px", "10px", "200px"]} pt={["25px", "30px", "80px"]}>
       <SimpleGrid
         columns={{ base: 1, md: 3 }}
         spacing={10}

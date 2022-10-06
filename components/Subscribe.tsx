@@ -31,7 +31,7 @@ export default function Simple() {
           Explain your vision with words and watch it come to life!
         </Heading>
         <Stack
-          px="200px"
+          px={["0px", "100px", "200px"]}
           direction={{ base: "column", md: "row" }}
           as={"form"}
           spacing={"12px"}

@@ -14,6 +14,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Spacer,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -27,16 +28,13 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box position={"sticky"} top="0px" bg="" zIndex={999}>
+    <Box bg="" zIndex={999}>
       <Flex
-        color={useColorModeValue("black", "black")}
-        bg={useColorModeValue("black", "black")}
+        color={useColorModeValue("white", "black")}
+        bg={useColorModeValue("transparent", "transparent")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={3}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("black", "black")}
         align={"center"}
       >
         <Flex
@@ -53,21 +51,13 @@ export default function WithSubnavigation() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
+        <Spacer />
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            Logo
-          </Text>
-
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }}>
             <DesktopNav />
           </Flex>
         </Flex>
-
-        <ThemeToggleButton />
+        <Spacer />
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -78,7 +68,7 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.200", "gray.200");
+  const linkColor = useColorModeValue("black", "white");
   const linkHoverColor = useColorModeValue("gray.400", "gray.400");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
@@ -240,62 +230,14 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Agência",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
   },
   {
     label: "Consultoria",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
   },
   {
     label: "Produtora",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
   },
   {
     label: "Vestiário",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
   },
 ];

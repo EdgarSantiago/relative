@@ -38,9 +38,6 @@ const Home: NextPage = () => {
   return (
     <Layout title="Início">
       <Section />
-      <Features />
-      <Blog />
-      <Testimonials />
       <Subscribe />
     </Layout>
   );

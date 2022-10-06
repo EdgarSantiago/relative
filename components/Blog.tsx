@@ -62,7 +62,7 @@ const ArticleList = () => {
     <Container
       maxW={"7xl"}
       px={["20px", "40px", "100px"]}
-      py={["25px", "30px", "100px"]}
+      py={["25px", "30px", "150px"]}
     >
       <Heading as="h1">Stories by Chakra Templates</Heading>
       <Box

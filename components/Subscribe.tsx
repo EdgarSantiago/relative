@@ -20,29 +20,18 @@ export default function Simple() {
   const [error, setError] = useState(false);
 
   return (
-    <Flex
-      minH={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
-      <Container
-        maxW={"lg"}
-        bg={useColorModeValue("white", "whiteAlpha.100")}
-        boxShadow={"xl"}
-        rounded={"lg"}
-        p={6}
-        flexDirection={"column"}
-      >
+    <Flex minH={"100%"} py="100px" align={"center"} justify={"center"}>
+      <Container maxW={"1000px"} rounded={"lg"} p={6} flexDirection={"column"}>
         <Heading
           as={"h2"}
-          fontSize={{ base: "xl", sm: "2xl" }}
+          fontSize={{ base: "xl", sm: "6xl" }}
           textAlign={"center"}
-          mb={5}
+          mb={"60px"}
         >
-          Inscreva-se
+          Explain your vision with words and watch it come to life!
         </Heading>
         <Stack
+          px="200px"
           direction={{ base: "column", md: "row" }}
           as={"form"}
           spacing={"12px"}
@@ -65,8 +54,10 @@ export default function Simple() {
         >
           <FormControl>
             <Input
+              p="25px"
               variant={"solid"}
               borderWidth={1}
+              borderRadius="2000px"
               color={"gray.800"}
               _placeholder={{
                 color: "gray.400",
@@ -86,6 +77,8 @@ export default function Simple() {
           </FormControl>
           <FormControl w={{ base: "100%", md: "40%" }}>
             <Button
+              p="25px"
+              borderRadius="2000px"
               colorScheme={state === "success" ? "green" : "gray"}
               isLoading={state === "submitting"}
               w="100%"
@@ -95,15 +88,6 @@ export default function Simple() {
             </Button>
           </FormControl>
         </Stack>
-        <Text
-          mt={2}
-          textAlign={"center"}
-          color={error ? "red.500" : "gray.500"}
-        >
-          {error
-            ? "Ocorreu um erro, tente mais tarde novamente!."
-            : "Você não receberá nenhum spam!"}
-        </Text>
       </Container>
     </Flex>
   );

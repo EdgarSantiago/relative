@@ -7,7 +7,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -23,46 +22,19 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import ThemeToggleButton from "./chakra/theme-toggle-button";
+import Link from "next/link";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box bg="" zIndex={999}>
-      <Flex
-        color={useColorModeValue("white", "black")}
-        bg={useColorModeValue("transparent", "transparent")}
-        minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        align={"center"}
-      >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
+      <Spacer />
+      <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex display={{ base: "flex" }}>
+          <DesktopNav />
         </Flex>
-        <Spacer />
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Flex display={{ base: "none", md: "flex" }}>
-            <DesktopNav />
-          </Flex>
-        </Flex>
-        <Spacer />
       </Flex>
-
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
     </Box>
   );
 }
@@ -75,22 +47,10 @@ const DesktopNav = () => {
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
+        <Box key={navItem.label} color="white">
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
+              <Link href={navItem.href ?? "#"}>{navItem.label}</Link>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -116,16 +76,9 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel }: any) => {
   return (
-    <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("", "gray.900") }}
-    >
+    <Link href={href}>
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
@@ -167,7 +120,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
+const MobileNavItem = ({ label, children, href }: any) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -209,8 +162,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           align={"start"}
         >
           {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+            children.map((child: any) => (
+              <Link key={child.label} href={child.href}>
                 {child.label}
               </Link>
             ))}
@@ -234,14 +187,14 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Consultoria",
-    href: "/consultoria",
+    href: "consultoria",
   },
   {
     label: "Produtora",
-    href: "/produtora",
+    href: "produtora",
   },
   {
     label: "Vestiário",
-    href: "/vestiario",
+    href: "vestiario",
   },
 ];

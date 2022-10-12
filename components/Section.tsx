@@ -1,5 +1,6 @@
 import {
   Stack,
+  Box,
   Flex,
   Button,
   Text,
@@ -10,16 +11,17 @@ import Navbar from "./Navbar";
 
 export default function WithBackgroundImage({ imgLink }: any) {
   return (
-    <Flex
+    <Box
+      display={"inline-flex"}
       w={"full"}
       h={"100vh"}
-      brightness="40%"
       background={`url(${imgLink})`}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >
       <VStack
         w={"full"}
+        brightness="20%"
         justify={"center"}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
@@ -56,6 +58,6 @@ export default function WithBackgroundImage({ imgLink }: any) {
           </Stack>
         </Stack>
       </VStack>
-    </Flex>
+    </Box>
   );
 }

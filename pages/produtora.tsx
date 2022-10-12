@@ -35,7 +35,10 @@ import Layout from "../components/Layout";
 
 const Produtora: NextPage = () => {
   return (
-    <Layout title="Início">
+    <Layout
+      title="Início"
+      img="https://cdn.discordapp.com/attachments/715536557460947014/1029809173208248340/bCurUbJ-recording-studio-wallpaper.jpg"
+    >
       <Subscribe />
     </Layout>
   );

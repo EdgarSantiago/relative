@@ -96,23 +96,21 @@ const Home: NextPage = () => {
             RELATIVIDADE
           </Heading>
           <Heading>
-            Esdras de Lucia é o artista que lidera a banda Relative.
+            Esdras De Lúcia é a mente por trás das intenções do grupo Relative.
             <br />
             <br />
-            Com verdade e ternura, Esdras trafega com leveza entre os mundos da
-            música e da ideologia. Assim como as emoções, relativas a cada um, o
-            versátil álbum de Relative carrega estilos e pegadas únicos para
-            cada uma de suas canções.
+            Com verdade é ternura, trafegamos com leveza entre os mundos
+            alinhando ações a ideologias, assim como as emoções relativas a cada
+            um cada ação da relative enquanto trabalho carrega a semente da
+            ancestralidade para cada uma de suas ações.
+            <br />
+            <br /> E o denominador comum para cada ação se encontra exatamente
+            no que Esdras deseja para o mundo: Inspiração, auto estima, empatia
+            e acima de tudo respeito.
             <br />
             <br />
-            O denominador comum de todas as músicas se encontra exatamente no
-            que Esdras deseja para o mundo: inspiração, auto estima, empatia e,
-            acima de tudo, respeito.
-            <br />
-            <br />
-            Mate constantemente a sua curiosidade por Relative, pois cada vez
-            que se ouve suas canções, novas conexões podem se formar dentro de
-            você.
+            Mate constantemente sua curiosidade por relative, pois a cada ação
+            que desenvolvemos novas conexões podem se formar dentro de você.
           </Heading>
         </Box>
       </Container>

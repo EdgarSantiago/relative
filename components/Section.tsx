@@ -21,7 +21,6 @@ export default function WithBackgroundImage({ imgLink }: any) {
     >
       <VStack
         w={"full"}
-        brightness="20%"
         justify={"center"}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}

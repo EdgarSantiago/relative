@@ -8,12 +8,13 @@ import {
 } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 
-export default function WithBackgroundImage() {
+export default function WithBackgroundImage({ imgLink }: any) {
   return (
     <Flex
       w={"full"}
       h={"100vh"}
-      backgroundImage={"url(https://wallpapercave.com/wp/wp7099560.jpg)"}
+      brightness="40%"
+      background={`url(${imgLink})`}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >

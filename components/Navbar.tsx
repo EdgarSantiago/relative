@@ -230,14 +230,18 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Agência",
+    href: "/",
   },
   {
     label: "Consultoria",
+    href: "/consultoria",
   },
   {
     label: "Produtora",
+    href: "/produtora",
   },
   {
     label: "Vestiário",
+    href: "/vestiario",
   },
 ];

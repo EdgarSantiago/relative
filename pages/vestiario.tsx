@@ -33,12 +33,15 @@ import {
 } from "@chakra-ui/icons";
 import Layout from "../components/Layout";
 
-const Home: NextPage = () => {
+const Vestiario: NextPage = () => {
   return (
-    <Layout title="Início" img="https://wallpapercave.com/wp/wp7099560.jpg">
+    <Layout
+      title="Início"
+      img="https://cdn.discordapp.com/attachments/715536557460947014/1029804563378745404/African-girl-summer-fashion-dress_2560x1600.jpg"
+    >
       <Subscribe />
     </Layout>
   );
 };
 
-export default Home;
+export default Vestiario;

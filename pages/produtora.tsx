@@ -33,12 +33,12 @@ import {
 } from "@chakra-ui/icons";
 import Layout from "../components/Layout";
 
-const Home: NextPage = () => {
+const Produtora: NextPage = () => {
   return (
-    <Layout title="Início" img="https://wallpapercave.com/wp/wp7099560.jpg">
+    <Layout title="Início">
       <Subscribe />
     </Layout>
   );
 };
 
-export default Home;
+export default Produtora;

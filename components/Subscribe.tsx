@@ -20,11 +20,11 @@ export default function Simple() {
   const [error, setError] = useState(false);
 
   return (
-    <Flex minH={"100%"} py="100px" align={"center"} justify={"center"}>
+    <Flex minH={"100%"} py="150px" align={"center"} justify={"center"}>
       <Container maxW={"1000px"} rounded={"lg"} p={6} flexDirection={"column"}>
         <Heading
           as={"h2"}
-          fontSize={{ base: "xl", sm: "6xl" }}
+          fontSize={{ base: "3xl", sm: "6xl" }}
           textAlign={"center"}
           mb={"60px"}
         >
